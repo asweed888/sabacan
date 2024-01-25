@@ -1,0 +1,41 @@
+lang: rust
+spec:
+- location: manifest
+  codefile:
+    - name: template
+  upstream:
+    - name: domain
+      codefile:
+        - name: repository
+
+      upstream:
+        - name: model
+          codefile:
+            - name: entity
+            - name: lang
+            - name: arch
+            - name: root
+
+    - name: infra
+      codefile:
+        - name: repository
+
+
+    - name: usecase
+      upstream:
+        - name: load
+          codefile:
+            - name: manifest
+
+        - name: generate
+          codefile:
+            - name: manifest
+            - name: codefile
+
+
+- location: codefile
+  upstream:
+    - name: template
+      codefile:
+        - name: utils
+
