@@ -29,7 +29,6 @@ spec:
 
         - name: generate
           codefile:
-            - name: manifest
             - name: codefile
 
 
