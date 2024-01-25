@@ -16,7 +16,6 @@ pub mod manifest {
             pub mod manifest;
         }
         pub mod generate {
-            pub mod manifest;
             pub mod codefile;
         }
     }
