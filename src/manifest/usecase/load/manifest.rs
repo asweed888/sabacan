@@ -1,7 +1,7 @@
 use crate::manifest::domain::model::entity::Manifest;
 use crate::manifest::domain::repository::ManifestRepository;
 
-pub struct ManifestLoadUseCase<R>
+pub struct LoadManifestUseCase<R>
 where
     R: ManifestRepository,
 {
@@ -9,7 +9,7 @@ where
 }
 
 
-impl<R> ManifestLoadUseCase<R>
+impl<R> LoadManifestUseCase<R>
 where
     R: ManifestRepository,
 {
