@@ -38,3 +38,13 @@ spec:
       codefile:
         - name: utils
 
+
+- location: rust
+  upstream:
+    - name: management
+      upstream:
+        - name: project
+          codefile:
+            - name: wide
+            - name: narrow
+

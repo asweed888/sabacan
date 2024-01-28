@@ -25,4 +25,12 @@ pub mod codefile {
     pub mod template {
         pub mod utils;
     }
+}
+pub mod rust {
+    pub mod management {
+        pub mod project {
+            pub mod wide;
+            pub mod narrow;
+        }
+    }
 } // Automatically exported by saba.
