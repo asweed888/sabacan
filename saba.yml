@@ -40,11 +40,7 @@ spec:
 
 
 - location: rust
-  upstream:
-    - name: management
-      upstream:
-        - name: project
-          codefile:
-            - name: wide
-            - name: narrow
+  codefile:
+    - name: module
+    - name: modblock
 
