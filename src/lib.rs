@@ -27,10 +27,6 @@ pub mod codefile {
     }
 }
 pub mod rust {
-    pub mod management {
-        pub mod project {
-            pub mod wide;
-            pub mod narrow;
-        }
-    }
+    pub mod module;
+    pub mod modblock;
 } // Automatically exported by saba.
