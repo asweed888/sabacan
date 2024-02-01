@@ -41,6 +41,6 @@ spec:
 
 - location: rust
   codefile:
-    - name: module
     - name: modblock
+    - name: main_rs
 

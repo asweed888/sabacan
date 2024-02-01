@@ -27,6 +27,6 @@ pub mod codefile {
     }
 }
 pub mod rust {
-    pub mod module;
     pub mod modblock;
+    pub mod main_rs;
 } // Automatically exported by saba.
