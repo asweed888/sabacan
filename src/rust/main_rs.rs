@@ -16,11 +16,9 @@ pub fn path<'a>(path: &'a PathBuf) -> anyhow::Result<PathBuf> {
     Ok(fpath1)
 }
 
-pub fn gen(path: PathBuf) -> anyhow::Result<()> {
+pub fn gen<'a>(path: &'a PathBuf) -> anyhow::Result<()> {
     let path_exists = path.as_path().exists();
     let path = path.to_str().unwrap();
-
-    println!("path: {}", path);
 
     if !path_exists {
         let mut file = File::create(path)?;
