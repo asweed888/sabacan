@@ -20,6 +20,8 @@ pub fn gen(path: PathBuf) -> anyhow::Result<()> {
     let path_exists = path.as_path().exists();
     let path = path.to_str().unwrap();
 
+    println!("path: {}", path);
+
     if !path_exists {
         let mut file = File::create(path)?;
         file.write_all("".as_bytes())?;
