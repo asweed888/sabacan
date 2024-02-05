@@ -16,7 +16,7 @@ pub fn path<'a>(path: &'a PathBuf) -> anyhow::Result<PathBuf> {
     Ok(fpath1)
 }
 
-pub fn gen<'a>(path: PathBuf) -> anyhow::Result<()> {
+pub fn gen(path: PathBuf) -> anyhow::Result<()> {
     let path_exists = path.as_path().exists();
     let path = path.to_str().unwrap();
 
