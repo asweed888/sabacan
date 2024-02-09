@@ -3,7 +3,9 @@ use std::path::PathBuf;
 
 pub trait ModblockHandler<'a> {
     fn save_modblock(&self) -> anyhow::Result<()>;
-    fn modblock(&self, path: &'a PathBuf) -> anyhow::Result<String>;
+    fn modblock(&self, _path: &'a PathBuf) -> anyhow::Result<String> {
+        Ok("modblock default".to_string())
+    }
     fn upstream_modblock(&self, upstream: &Vec<Yaml>, mod_block: &mut String, tabs: &'a str) -> anyhow::Result<()>;
     fn upstream_modblock_with_path(&self, _upstream: &Vec<Yaml>, _mod_block: &mut String, _tabs: &'a str, _path: &'a PathBuf) -> anyhow::Result<()> {
         Ok(())
