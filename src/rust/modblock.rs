@@ -1,10 +1,9 @@
-use crate::manifest::domain::model::entity::Manifest;
 use yaml_rust::Yaml;
 use std::path::PathBuf;
 
 pub trait ModblockHandler<'a> {
-    fn save_modblock(&self, manifest: &'a Manifest) -> anyhow::Result<()>;
-    fn modblock(&self, manifest: &'a Manifest, path: &'a PathBuf) -> anyhow::Result<String>;
+    fn save_modblock(&self) -> anyhow::Result<()>;
+    fn modblock(&self, path: &'a PathBuf) -> anyhow::Result<String>;
     fn upstream_modblock(&self, upstream: &Vec<Yaml>, mod_block: &mut String, tabs: &'a str) -> anyhow::Result<()>;
     fn upstream_modblock_with_path(&self, _upstream: &Vec<Yaml>, _mod_block: &mut String, _tabs: &'a str, _path: &'a PathBuf) -> anyhow::Result<()> {
         Ok(())
