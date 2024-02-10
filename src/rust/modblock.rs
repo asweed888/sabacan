@@ -6,9 +6,6 @@ pub trait ModblockHandler<'a> {
     fn modblock(&self, _path: &'a PathBuf) -> anyhow::Result<String> {
         Ok("modblock default".to_string())
     }
-    fn upstream_modblock_with_path(&self, _upstream: &Vec<Yaml>, _mod_block: &mut String, _path: &'a PathBuf, _tabs: &'a str) -> anyhow::Result<()> {
-        Ok(())
-    }
     fn upstream_modblock(&self, upstream: &Vec<Yaml>, mod_block: &mut String, tabs: &'a str) -> anyhow::Result<()>;
     fn codefile_modblock(&self, codefile: &Vec<Yaml>, mod_block: &mut String, tabs: &'a str) -> anyhow::Result<()>;
     fn modblock_pattern(&self, path: &'a PathBuf) -> &str {
