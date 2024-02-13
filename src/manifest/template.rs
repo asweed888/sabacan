@@ -34,21 +34,12 @@ spec:
 
 - location: usecase
   upstream:
-    - name: create
+    - name: character
       codefile:
-        - name: character
-
-    - name: read
-      codefile:
-        - name: character
-
-    - name: update
-      codefile:
-        - name: character
-
-    - name: delete
-      codefile:
-        - name: character
+        - name: create
+        - name: read
+        - name: update
+        - name: delete
 
 
 - location: presentation
