@@ -26,3 +26,20 @@ pub fn default_struct(pkgname: &str, fname: &str) -> String {
         to_title(fname)
     }
 }
+
+pub fn either(pkgname: &str, fname: &str, num: u16) -> String {
+    match pkgname {
+        "usecase" => {
+            match num {
+                0 => fname.to_string(),
+                _ => pkgname.to_string()
+            }
+        }
+        _ => {
+            match num {
+                0 => pkgname.to_string(),
+                _ => fname.to_string()
+            }
+        }
+    }
+}
