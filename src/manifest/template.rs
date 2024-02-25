@@ -8,9 +8,9 @@ arch: ddd
 {% endif -%}
 spec:
 {% if !is_ddd -%}
-- location: character
+- location: act
   codefile:
-    - name: entity
+    - name: greet
 {% else -%}
 - location: domain
   upstream:
@@ -33,13 +33,8 @@ spec:
 
 
 - location: usecase
-  upstream:
+  codefile:
     - name: character
-      codefile:
-        - name: create
-        - name: read
-        - name: update
-        - name: delete
 
 
 - location: presentation
@@ -49,6 +44,7 @@ spec:
         - name: handler
           codefile:
             - name: character
+
 
 - location: di
   codefile:
