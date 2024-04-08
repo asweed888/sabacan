@@ -8,7 +8,7 @@ arch: ddd
 {% endif -%}
 spec:
 {% if !is_ddd -%}
-- location: act
+- location: traits
   codefile:
     - name: greet
 {% else -%}
@@ -16,25 +16,25 @@ spec:
   upstream:
     - name: model
       upstream:
-        - name: character
+        - name: fish
           codefile:
             - name: entity
 
     - name: repository
       codefile:
-        - name: character
+        - name: fish
 
 
 - location: infrastructure
   upstream:
     - name: repository
       codefile:
-        - name: character
+        - name: fish
 
 
 - location: usecase
   codefile:
-    - name: character
+    - name: fish
 
 
 - location: presentation
@@ -43,12 +43,8 @@ spec:
       upstream:
         - name: handler
           codefile:
-            - name: character
+            - name: aquarium
 
-
-- location: di
-  codefile:
-    - name: container
 {% endif -%}
 ", ext = "txt")]
 pub struct ManifestTemplate {
