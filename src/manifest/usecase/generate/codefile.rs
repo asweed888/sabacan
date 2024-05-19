@@ -19,8 +19,10 @@ pub trait CodefileGenerator<'a> {
             let upstream = spec["upstream"].as_vec().unwrap_or(vec_default);
             let codefile = spec["codefile"].as_vec().unwrap_or(vec_default);
 
-            workdir.push(location);
-            fs::create_dir_all(workdir.clone())?;
+            if location != "src" {
+                workdir.push(location);
+                fs::create_dir_all(workdir.clone())?;
+            }
 
             if !upstream.is_empty() {
                 self.upstream_action(workdir.clone(), upstream, &manifest)?;
