@@ -8,9 +8,11 @@ arch: ddd
 {% endif -%}
 spec:
 {% if !is_ddd -%}
-- location: traits
-  codefile:
-    - name: greet
+- location: lib
+  upstream:
+    - name: traits
+      codefile:
+        - name: greet
 {% else -%}
 - location: domain
   upstream:
